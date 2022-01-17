@@ -16,21 +16,7 @@ import './styles.scss'
 import './prism.scss'
 import Card from './Card'
 import ExampleControlSlot from './ExampleControlSlot'
-import Basic from './demos/basic'
-import BackgroundEvents from './demos/backgroundEvents'
 import Selectable from './demos/selectable'
-import CreateEventWithNoOverlap from './demos/createEventWithNoOverlap'
-import Cultures from './demos/cultures'
-import Timezones from './demos/timezones'
-import Luxon from './demos/luxon'
-import Popup from './demos/popup'
-import Rendering from './demos/rendering'
-import CustomView from './demos/customView'
-import Resource from './demos/resource'
-import DndResource from './demos/dndresource'
-import Timeslots from './demos/timeslots'
-import Dnd from './demos/dnd'
-import DndOutsideSource from './demos/dndOutsideSource'
 import Dropdown from 'react-bootstrap/lib/Dropdown'
 import MenuItem from 'react-bootstrap/lib/MenuItem'
 
@@ -79,23 +65,7 @@ class Example extends React.Component {
 
   render() {
     let selected = this.state.selected
-    let Current = {
-      basic: Basic,
-      backgroundEvents: BackgroundEvents,
-      selectable: Selectable,
-      timezones: Timezones,
-      cultures: Cultures,
-      luxon: Luxon,
-      popup: Popup,
-      rendering: Rendering,
-      customView: CustomView,
-      resource: Resource,
-      timeslots: Timeslots,
-      dnd: Dnd,
-      dndresource: DndResource,
-      dndOutsideSource: DndOutsideSource,
-      createEventWithNoOverlap: CreateEventWithNoOverlap,
-    }[selected]
+    let Current = Selectable
 
     return (
       <div className="app">

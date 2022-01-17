@@ -1,7 +1,7 @@
 import React from 'react'
-import { Calendar, Views } from 'react-big-calendar'
+import { Calendar, Views, momentLocalizer } from 'react-big-calendar'
 import events from '../events'
-import ExampleControlSlot from '../ExampleControlSlot'
+import moment from 'moment'
 
 const propTypes = {}
 
@@ -28,15 +28,9 @@ class Selectable extends React.Component {
   }
 
   render() {
-    const { localizer } = this.props
+    const localizer = momentLocalizer(moment)
     return (
       <>
-        <ExampleControlSlot.Entry waitForOutlet>
-          <strong>
-            Click an event to see more info, or drag the mouse over the calendar
-            to select a date/time range.
-          </strong>
-        </ExampleControlSlot.Entry>
         <Calendar
           selectable
           localizer={localizer}
